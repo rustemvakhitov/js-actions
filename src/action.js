@@ -16,6 +16,7 @@ async function run()
     const repoName = context.payload.repository.name;
 
     console.log('context.repo == ' + context.repo);
+    console.log('github.context.payload.repository.name == ' + github.context.payload.repository.name);
     console.log('pull_request.number == ' + pull_request.number);
 
     await oktokit.issues.createComment({
