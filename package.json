@@ -17,5 +17,9 @@
   "scripts": {
     "build": "ncc build src/action.js -o dist",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
   }
 }
