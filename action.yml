@@ -1,0 +1,7 @@
+name: 'Message Action'
+description: 'gives a message to a user'
+author: 'RV'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

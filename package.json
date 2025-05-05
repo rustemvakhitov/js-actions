@@ -1,0 +1,21 @@
+{
+  "name": "js-actions",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/rustemvakhitov/js-actions#readme",
+  "bugs": {
+    "url": "https://github.com/rustemvakhitov/js-actions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustemvakhitov/js-actions.git"
+  },
+  "license": "MIT",
+  "author": "RV",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/action.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
