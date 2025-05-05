@@ -11,8 +11,10 @@ async function run()
     const {context = {}} = github;
     const {pull_request} = context.payload;
 
+    const repoName = context.payload.repository.name;
+
     await oktokit.issues.createComment({
-        context.repo, 
+        repo: context.repo, 
         issue_number: pull_request.number, 
         body: 'Comment from RV'});
 
