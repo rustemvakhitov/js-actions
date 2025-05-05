@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const { context } = require('@actions/github')
 
 async function run()
 {
@@ -10,7 +11,7 @@ async function run()
 
     
 
-    const {context = {}} = github;
+    //const {context = {}} = github;
     const {pull_request} = context.payload;
 
     const repoName = github.context.payload.repository.name;
@@ -22,7 +23,7 @@ async function run()
     console.log('context.repoName == ' + context.repoName);
     console.log('repoName == ' + repoName);
 
-    await oktokit.rest.issues.createComment({
+    await oktokit.issues.createComment({
         ...context.repo, 
         issue_number: pull_request.number, 
         body: 'Comment from RV'});
