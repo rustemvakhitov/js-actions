@@ -1,9 +1,8 @@
 name: Call_my_Action
 
-on:
-  push:
-    branches:
-      - main
+on: 
+  pull_request:
+    types: [opened]
 
 jobs:
   Calling_my_Action:
@@ -12,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   Pre-Requisite:
     runs-on: ubuntu-latest
@@ -24,4 +25,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: echo POST-Requisite is running
