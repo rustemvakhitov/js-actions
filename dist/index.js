@@ -31851,7 +31851,7 @@ async function run()
     console.log('repoName == ' + repoName);
 
     await oktokit.issues.createComment({
-        repo: context.repoName, 
+        ...context.repo, 
         issue_number: pull_request.number, 
         body: 'Comment from RV'});
 
