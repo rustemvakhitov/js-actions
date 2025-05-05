@@ -23,7 +23,7 @@ async function run()
     console.log('context.repoName == ' + context.repoName);
     console.log('repoName == ' + repoName);
 
-    await oktokit.issues.createComment({
+    await oktokit.rest.issues.createComment({
         ...context.repo, 
         issue_number: pull_request.number, 
         body: 'Comment from RV'});
