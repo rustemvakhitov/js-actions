@@ -17,14 +17,10 @@ jobs:
   Pre-Requisite:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Pre-Requisite is running
+      - run: echo Hello from Pre-Requisite job
 
   Post-Requisite:
     runs-on: ubuntu-latest
     needs: Calling_my_Action
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./
-        with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: echo POST-Requisite is running
+      - run: echo Hello from POST-Requisite job
