@@ -2,6 +2,11 @@ name: 'Message Action'
 description: 'gives a message to a user'
 author: 'RV'
 
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github token'
+    required: true
+
 runs:
   using: 'node12'
   main: 'dist/index.js'
