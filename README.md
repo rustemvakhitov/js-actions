@@ -16,7 +16,6 @@ ncc build src/action.js -o dist
 #test it
 node dist/index.js
 
-
 #extra packages
 npm install @actions/core
 npm install @actions/github
