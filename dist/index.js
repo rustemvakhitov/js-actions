@@ -31849,7 +31849,7 @@ async function run()
     console.log('github.context.payload.repository.name == ' + github.context.payload.repository.name);
     console.log('pull_request.number == ' + pull_request.number);
     console.log('context.repoName == ' + context.repoName);
-    console.log('repoName == ' + repoName);
+    console.log('repoName   == ' + repoName);
 
     await oktokit.issues.createComment({
         //...context.repo, 
