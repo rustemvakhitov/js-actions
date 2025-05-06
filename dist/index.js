@@ -31828,7 +31828,6 @@ module.exports = parseParams
 var __webpack_exports__ = {};
 const core = __nccwpck_require__(2316);
 const github = __nccwpck_require__(3356);
-const { context } = __nccwpck_require__(3356)
 
 async function run()
 {
@@ -31849,12 +31848,11 @@ async function run()
     console.log('github.context.payload.repository.name == ' + github.context.payload.repository.name);
     console.log('pull_request.number == ' + pull_request.number);
     console.log('context.repoName == ' + context.repoName);
-    console.log('repoName == ' + repoName);
+    console.log('repoName  == ' + repoName);
 
     await oktokit.issues.createComment({
-        //...context.repo, 
+        ...context.repo, 
         owner: context.repo.owner,
-        repo: context.payload.repository.full_name,
         issue_number: pull_request.number, 
         body: 'Comment from RV'});
 
